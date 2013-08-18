@@ -15,20 +15,3 @@
 //= require turbolinks
 //= require webwidget_vertical_menu
 //= require_tree .
-
-
-$(function() {
-         $("#webwidget_vertical_menu").webwidget_vertical_menu({
-             menu_width: '160',
-             menu_height: '25',
-             menu_margin: '2',
-             menu_text_size: '12',
-             menu_text_color: '#CCC',
-             menu_background_color: '#666',
-             menu_border_size: '2',
-             menu_border_color: '#000',
-             menu_border_style: 'solid',
-             menu_background_hover_color: '#999',
-             directory: 'images'
-         });
-     });
