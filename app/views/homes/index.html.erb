@@ -1,0 +1,59 @@
+<div id="webwidget_vertical_menu" class="webwidget_vertical_menu">
+	<ul>
+		<% @sub_users.each do |sub_user| %>
+			<li>
+				<a href="#"><%= sub_user.name %></a>
+        <ul>
+        	<% sub_user.categories.each do |category| %>
+	          <li>
+	          	<a href="#"><%= category.name %></a>
+	            <ul>
+	            	<% category.sub_categories.each do |sub_category| %>
+		              <li>
+		              	<a href="#"><%= sub_category.name %></a>
+		                <ul>
+		                	<% sub_category.topics.each do |topic| %>
+			                	<li>
+			                		<a href="#"><%= topic.name %></a>
+			                	</li>
+			                <% end %>
+		                </ul>
+		              </li>
+		            <% end %>
+	            </ul>
+	          </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+	</ul>
+	<div style="clear: both"></div>
+</div>
+
+
+
+
+
+    
+        
+    
+    
+
+
+<script language="javascript" type="text/javascript">
+     $(function() {
+         $("#webwidget_vertical_menu").webwidget_vertical_menu({
+             menu_width: '160',
+             menu_height: '25',
+             menu_margin: '2',
+             menu_text_size: '12',
+             menu_text_color: '#CCC',
+             menu_background_color: '#666',
+             menu_border_size: '2',
+             menu_border_color: '#000',
+             menu_border_style: 'solid',
+             menu_background_hover_color: '#999',
+             directory: 'images'
+         });
+     });
+ </script>
