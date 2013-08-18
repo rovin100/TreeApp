@@ -1,0 +1,18 @@
+#webwidget_vertical_menu.webwidget_vertical_menu
+  %ul
+    - @sub_users.each do |sub_user|
+      %li
+        %a{:href => "#"}= sub_user.name
+        %ul
+          - sub_user.categories.each do |category|
+            %li
+              %a{:href => "#"}= category.name
+              %ul
+                - category.sub_categories.each do |sub_category|
+                  %li
+                    %a{:href => "#"}= sub_category.name
+                    %ul
+                      - sub_category.topics.each do |topic|
+                        %li
+                          %a{:href => "#"}= topic.name
+  %div{:style => "clear: both"}
