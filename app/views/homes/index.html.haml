@@ -14,5 +14,5 @@
                     %ul
                       - sub_category.topics.each do |topic|
                         %li
-                          %a{:href => "#"}= topic.name
+                          %a{:href => topic.url}= topic.name
   %div{:style => "clear: both"}

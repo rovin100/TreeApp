@@ -14,4 +14,4 @@ $ ->
     menu_border_color: "#000"
     menu_border_style: "solid"
     menu_background_hover_color: "#999"
-    directory: "images"
+    directory: "assets"
